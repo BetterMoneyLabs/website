@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Better Money Labs | Financial Infrastructure Innovation</title>
+    <meta name="description" content="Better Money Labs conducts cutting-edge research and development to create secure, scalable financial infrastructure to power the global economy.">
+    <meta name="keywords" content="financial infrastructure, blockchain, fintech, payment systems, cryptocurrency, financial technology, stablecoin, Better Money Labs">
+    <meta name="author" content="Better Money Labs">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bettermoneylabs.org/">
+    <meta property="og:title" content="Better Money Labs | Financial Infrastructure Innovation">
+    <meta property="og:description" content="Building the financial infrastructure of tomorrow with formally verified, secure, scalable solutions.">
+    <meta property="og:image" content="https://bettermoneylabs.org/logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Better Money Labs">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bettermoneylabs.org/">
+    <meta property="twitter:title" content="Better Money Labs | Financial Infrastructure Innovation">
+    <meta property="twitter:description" content="Building the financial infrastructure of tomorrow with secure, scalable solutions trusted by leading institutions.">
+    <meta property="twitter:image" content="https://bettermoneylabs.org/logo.jpg">
+    <meta property="twitter:creator" content="@bettermoneylabs">
+    <meta property="twitter:site" content="@bettermoneylabs">
+    
+    <!-- Schema.org for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Better Money Labs",
+        "alternateName": "BML",
+        "url": "https://bettermoneylabs.org/",
+        "logo": "https://bettermoneylabs.org/logo.jpg",
+        "description": "Better Money Labs conducts cutting-edge research and development to create secure, scalable financial infrastructure that powers the global economy.",
+        "foundingDate": "2026",
+        "founders": [
+            {
+                "@type": "Person",
+                "name": "Alexander Chepurnoy"
+            },
+            {
+                "@type": "Person", 
+                "name": "Maximilian Kobernik"
+            },
+            {
+                "@type": "Person",
+                "name": "Bruno Woltzenlogel Paleo"
+            }
+        ],
+        "sameAs": [
+            "https://linkedin.com/company/bettermoneylabs",
+            "https://twitter.com/bettermoneylabs",
+            "https://github.com/bettermoneylabs"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "hello@bettermoneylabs.org",
+            "contactType": "General Inquiry"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bettermoneylabs.org/">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --gray-light: #F5F5F5;
+            --gray-medium: #E0E0E0;
+            --gray-dark: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--black);
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: var(--white);
+            position: relative;
+        }
+
+        .logo {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .logo .labs {
+            font-size: 0.6em;
+            display: block;
+            font-weight: 400;
+        }
+
+        .tagline {
+            font-size: clamp(1.4rem, 3vw, 1.7rem);
+            font-weight: 300;
+            max-width: 800px;
+            opacity: 0.8;
+            margin-bottom: 4rem;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            width: 2px;
+            height: 40px;
+            background: var(--black);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(10px); }
+            60% { transform: translateY(5px); }
+        }
+
+        /* About Section */
+        .about {
+            padding: 8rem 2rem;
+            max-width: 70ch;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: clamp(2.5rem, 5vw, 3rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 4rem;
+        }
+
+        .divider {
+            width: 80px;
+            height: 1px;
+            background: var(--gray-medium);
+            margin: 4rem auto;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 8rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team h2 {
+            font-size: clamp(2.5rem, 5vw, 3rem);
+            text-align: center;
+            margin-bottom: 4rem;
+            opacity: 0.9;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .team-card {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.4s ease;
+        }
+
+        .team-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gray-light) 0%, var(--gray-medium) 100%);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--gray-dark);
+            border: 4px solid var(--white);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .team-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+
+        .team-card h3:hover {
+            opacity: 0.7;
+        }
+
+        .role {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--gray-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .bio {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--gray-dark);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: 1px solid var(--gray-medium);
+            border-radius: 50%;
+            background: var(--white);
+        }
+
+        .social-link:hover {
+            opacity: 1;
+            color: var(--black);
+            border-color: var(--black);
+            background: var(--white);
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--gray-medium);
+        }
+
+        .footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .email {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin: 1rem 0;
+            display: block;
+            color: var(--gray-dark);
+        }
+
+        .email:hover {
+            opacity: 1;
+            color: var(--black);
+            border-color: var(--black);
+            background: var(--white);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-social {
+                gap: 1rem;
+            }
+        }
+
+        /* Scroll Animations */
+        .observe {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 2.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+            will-change: transform, opacity;
+        }
+
+        .observe.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Enhanced fade-in effects for different elements */
+        .hero .observe {
+            animation: heroFadeIn 1s ease-out forwards;
+        }
+
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Team cards fade in simultaneously */
+        .team-card { animation-delay: 0s; }
+
+        /* Smooth parallax effect for hero content */
+        .hero-content {
+            will-change: transform;
+        }
+
+        /* Enhanced scroll indicator animation */
+        .scroll-indicator {
+            opacity: 0.6;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); opacity: 0.6; }
+            50% { transform: translateY(8px); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="logo">
+            <img src="logo.png" alt="Better Money Labs Logo" style="max-width: 40%; height: auto;">
+        </div>
+        <p class="tagline observe">
+            <span class="nowrap">Building tomorrow's</span>
+            <span class="nowrap">financial infrastructure</span>
+        </p>
+        <div class="scroll-indicator"></div>
+    </section>
+
+        <!-- About Section -->
+    <section class="about observe" id="about">
+        <h2>Pioneering <br /> Financial Innovation</h2>
+        <p>
+            At Better Money Labs, we conduct cutting-edge research and development 
+            to create secure, formally verified, scalable financial infrastructure 
+            to power the global economy. Our systems and protocols deliver 
+            unmatched reliability and performance.
+        </p>
+        <p>
+            We are building next-generation blockchains to serve as the foundation 
+            for an AI-powered financial world.
+        </p>
+        <div class="divider"></div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <h2>Our Team</h2>
+        <div class="team-grid">
+            <div class="team-card observe">
+                <div class="avatar">
+                    <img src="Alex.jpg" alt="Alexander Chepurnoy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                </div>
+                <h3>Alexander Chepurnoy</h3>
+                <div class="role"></div>
+                <div class="bio">
+                    Alexander Chepurnoy has been a Core Developer of NXT Blockchain,
+                    Co-Founder of Chainlink (formerly known as smartcontract.com), Lead
+                    Developer of Waves, Manager of Cardano’s and Hyperledger’s Scorex framework for custom blockchains and Founder and Core Developer of Ergo.
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/alexander-chepurnoy-3b454b1a3/" class="social-link" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/kushti" class="social-link" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://x.com/chepurnoy" class="social-link" target="_blank" title="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="team-card observe">
+                <div class="avatar">
+                    <img src="Max.jpg" alt="Maximilian Kobernik" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                </div>
+                <h3>Maximilian Kobernik</h3>
+                <div class="role"></div>
+                <div class="bio">
+                    Maximilian's expertise spans venture capital, decentralized
+                    finance, and asset tokenization, with previous leadership roles as
+                    VP at Coinstreet Partners, Fund Manager at CryptoBazar (CB Capital), 
+                    Strategic Advisor at Ergo, and Founder of Block Ventures.
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/maximilian-kobernik/" class="social-link" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://x.com/maximilian_web3" class="social-link" target="_blank" title="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="team-card observe">
+                <div class="avatar">
+                    <img src="Bruno.jpg" alt="Bruno Woltzenlogel Paleo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                </div>
+                <h3>Dr. Bruno Woltzenlogel Paleo</h3>
+                <div class="role"></div>
+                <div class="bio">
+                    Dr. Bruno Woltzenlogel Paleo has a PhD degree in Computational
+                    Logic and Formal Methods. He has been Director of Engineering
+                    for Cardano. He is the main author of formally verified 
+                    Djed and Gluon stablecoin protocols, an editor of the Journal of Financial Technology and the invited author of
+                    the entry about stablecoins in the Encyclopedia of Cryptography,
+                    Security and Privacy.
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/brunowp/" class="social-link" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Zahnentferner/" class="social-link" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://x.com/Zahnentferner" class="social-link" target="_blank" title="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3>Better Money Labs</h3>
+        <div class="footer-social">
+            <a href="https://linkedin.com/company/better-money-labs/" class="social-link" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://x.com/bettermoneylab" class="social-link" target="_blank" title="Twitter">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://github.com/bettermoneylabs" class="social-link" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <a href="mailto:hello@bettermoneylabs.org" class="email">hello@bettermoneylabs.org</a>
+        <div class="copyright">© 2026 Better Money Labs. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // Enhanced scroll animations with elegant fade-in effects
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -30px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Check if this is a team section to animate all cards simultaneously
+                    const teamSection = entry.target.closest('.team');
+                    if (teamSection) {
+                        // Animate all team cards at the same time
+                        teamSection.querySelectorAll('.team-card').forEach(card => {
+                            card.classList.add('animate');
+                        });
+                    } else {
+                        // For other elements, add slight staggered effect
+                        setTimeout(() => {
+                            entry.target.classList.add('animate');
+                        }, 100);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements that should animate
+        document.querySelectorAll('.observe, .team-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll behavior for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced scroll indicator behavior
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        if (scrollIndicator) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const maxScroll = document.body.scrollHeight - window.innerHeight;
+                const opacity = 1 - (scrolled / maxScroll);
+                scrollIndicator.style.opacity = Math.max(0, opacity);
+            });
+        }
+    </script>
+</body>
+</html>
